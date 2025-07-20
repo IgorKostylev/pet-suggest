@@ -38,8 +38,8 @@
     </div>
 
     <div v-show="showDropdown" class="dropdown">
-      <div v-if="loading" class="dropdown-status">Загрузка...</div>
-      <div v-else-if="error" class="dropdown-status error">{{ errorMessage }}</div>
+      <div v-if="loading" class="dropdown__status">Загрузка...</div>
+      <div v-else-if="error" class="dropdown__status error">{{ errorMessage }}</div>
 
       <div v-else-if="showInitialMessage" class="dropdown-message">
         <div class="message-title">Начните вводить имя</div>
@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <div v-else-if="suggestions.length === 0" class="dropdown-status">Ничего не найдено</div>
+      <div v-else-if="suggestions.length === 0" class="dropdown__status">Ничего не найдено</div>
 
       <ul v-else class="suggestions-list">
         <li
@@ -475,7 +475,7 @@ export default defineComponent({
   max-height: 300px;
   overflow: hidden;
 
-  .dropdown-status {
+  &__status {
     padding: 12px;
     text-align: center;
     color: #909399;
