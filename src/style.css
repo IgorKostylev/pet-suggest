@@ -69,7 +69,7 @@ button:focus-visible {
   text-align: center;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 475px) {
   #app {
     padding: 0 16px;
   }
