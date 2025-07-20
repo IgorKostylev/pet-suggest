@@ -9,7 +9,8 @@
     <div class="info">
       <div class="name">{{ displayName }}</div>
       <div class="meta">
-        <template v-if="item.type">@{{ item.alias }}</template>
+        <template v-if="item.type === 'user'">@{{ item.alias }}</template>
+        <template v-else>Компания</template>
       </div>
     </div>
   </div>
